@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "p835"
+version = "0.1.0"
+description = "ITU-R P.835-7 reference standard atmospheres"
+readme = "README.md"
+dependencies = []
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Evgeny Gennadievich Prutkov", email = "sviazist.pr@gmail.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
